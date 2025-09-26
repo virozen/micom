@@ -164,7 +164,7 @@
 
   /* HEADER */
   header{
-    @apply bg-slate-100 relative
+    @apply bg-slate-100 relative z-50
     before:w-full before:h-10 before:absolute before:bottom-0 before:left-0 before:bg-mi-blue-3;
   }
   .top-header,
@@ -199,12 +199,22 @@
   .menu{
     @apply w-full flex items-center justify-center relative z-10;
   }
+  .menu-item{
+    @apply relative;
+  }
   .menu .menu-item a{
     @apply text-sm px-2.5 py-2.5 flex text-slate-100 bg-mi-blue-3 transition-all
     hover:bg-mi-blue-2;
   }
   .dropdown{
-    @apply hidden;
+    @apply opacity-0 pointer-events-none bg-white absolute top-full left-0 w-[240px] shadow-2xl py-2;
+  }
+  .menu .menu-item .dropdown a{
+    @apply text-slate-700 bg-transparent px-5 py-2
+    hover:text-mi-blue-2;
+  }
+  .menu .menu-item:hover .dropdown{
+    @apply opacity-100 pointer-events-auto;
   }
   .burger-bt{
     @apply text-2xl text-mi-blue-2;
