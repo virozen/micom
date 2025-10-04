@@ -85,6 +85,9 @@
   .section-title i{
     @apply text-lg text-mi-blue-5;
   }
+  .parent-section{
+    @apply px-5 md:px-0;
+  }
   /* SECTION TITLE END */
 
   /* LINK */
