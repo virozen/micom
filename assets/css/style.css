@@ -586,6 +586,10 @@ video {
   width: 200px !important;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .max-w-\[112px\] {
   max-width: 112px;
 }
@@ -683,9 +687,9 @@ video {
   gap: 1.25rem;
 }
 
-.gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
+.gap-x-0 {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
 }
 
 .gap-y-5 {
@@ -764,8 +768,8 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
+.pl-0 {
+  padding-left: 0px;
 }
 
 .pr-0 {
@@ -2242,10 +2246,12 @@ fieldset i {
   line-height: 1.75rem;
 }
 
-@media only screen and (max-width: 768px){
-  .news-card-h .pic {
-    width: 80px !important;
-  }
+.src-button.for-mobile {
+  float: right;
+}
+
+.for-mobile {
+  display: none;
 }
 
 @media only screen and (max-width: 1600px){
@@ -2256,6 +2262,83 @@ fieldset i {
 
   .top-footer {
     max-width: 1210px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .topic-list{
+    overflow-y: auto;
+  }
+
+  .topic-list h5 {
+    display: none;
+  }
+
+  .topic {
+    white-space: nowrap;
+  }
+
+  .headline h2 {
+    font-size: 16px;
+    line-height: 1rem;
+    line-height: 120%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .for-mobile {
+    display: block;
+  }
+
+  .for-desktop {
+    display: none;
+  }
+
+  .news-card-h .pic {
+    width: 80px !important;
+  }
+
+  .top-header {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .top-header .cols-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .menu {
+    height: 2.5rem;
+    overflow-x: auto;
+  }
+
+  .src-form {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    flex-direction: row-reverse;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    opacity: 0;
+  }
+
+  .src-form.show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .super-menu {
+    height: calc(100vh - 70px);
+    max-height: 100vh;
+    border-radius: 0px;
+  }
+
+  .super-menu.active {
+    top: 100%;
   }
 }
 
@@ -2271,5 +2354,16 @@ fieldset i {
 @media (min-width: 768px) {
   .md\:pr-5 {
     padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
+  .lg\:pl-5 {
+    padding-left: 1.25rem;
   }
 }

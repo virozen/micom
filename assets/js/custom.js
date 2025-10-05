@@ -5,4 +5,8 @@ $(document).ready(function(){
         $(".super-menu").toggleClass("active");
     });
 
+    $(".src-button").click(function(){
+        $(".src-form").addClass("show");
+    });
+
 });

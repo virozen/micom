@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="cols-4">
-                            <div class="top-header-right">
+                            <div class="top-header-right for-desktop">
                                 <a href="index-berita.html" class="gov-link">
                                     <img src="assets/images/logo-dpr-ri.png" alt="">
                                     <span>KUMPULAN BERITA DPR</span>
@@ -51,6 +51,9 @@
                                     <img src="assets/images/logo-dprd-dki.png" alt="">
                                     <span>KUMPULAN BERITA DPRD JAKARTA</span>
                                 </a>
+                            </div>
+                            <div class="src-button for-mobile">
+                                <i class='ri-search-line'></i>
                             </div>
                         </div>
                     </div>
@@ -271,7 +274,7 @@
                 </div>
             </section>
 
-            <section class="parent-section headline">
+            <section class="parent-section headline for-desktop">
                 <div class="the-grid">
                     <div class="cols-6">
                         <div class="news-card-overlay">
@@ -354,6 +357,60 @@
                 </div>
             </section>
 
+            <section class="mobile-headline parent-section for-mobile mb-5">
+                <div class="the-grid">
+                    <div class="cols-12">
+                        <div class="owl-carousel headline-slider">
+                            <div class="item">
+                                <div class="news-card-overlay">
+                                    <div class="pic">
+                                        <a href="#" class="ratio ratio-75">
+                                            <img src="assets/images/stock/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="meta-info">
+                                            <a href="#" class="kanal">NEWS</a>
+                                        </div>
+                                        <h4><a href="#">Festival Budaya Nusantara 2025 Digelar Meriah dengan Ribuan Peserta</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news-card-overlay">
+                                    <div class="pic">
+                                        <a href="#" class="ratio ratio-75">
+                                            <img src="assets/images/stock/img-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="meta-info">
+                                            <a href="#" class="kanal">NEWS</a>
+                                        </div>
+                                        <h4><a href="#">Festival Budaya Nusantara 2025 Digelar Meriah dengan Ribuan Peserta</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news-card-overlay">
+                                    <div class="pic">
+                                        <a href="#" class="ratio ratio-75">
+                                            <img src="assets/images/stock/img-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="meta-info">
+                                            <a href="#" class="kanal">NEWS</a>
+                                        </div>
+                                        <h4><a href="#">Festival Budaya Nusantara 2025 Digelar Meriah dengan Ribuan Peserta</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="parent-section mb-10">
                 <div class="the-grid">
                     <div class="cols-4">
@@ -374,12 +431,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cols-8 pl-5">
+                    <div class="cols-8 pl-0 lg:pl-5">
                         <div class="section-title mb-5">
                             <h4>E-Paper</h4>
                             <a href="index-berita.html" class="link-with-icon">Selengkapnya <i class='ri-arrow-right-line'></i></a>
                         </div>
-                        <div class="grid grid-cols-2 gap-y-5 gap-x-10">
+                        <div class="w-full grid grid-cols-2 gap-y-5 gap-x-0 lg:gap-x-10">
                             <div class="cols-1">
                                 <div class="news-card-h items-center">
                                     <div class="text">
@@ -1676,7 +1733,10 @@
         <script src="assets/js/custom.js"></script>
         <script>
             $(document).ready(function(){
-              
+              $(".headline-slider").owlCarousel({
+                singleItem: true,
+                autoPlay: true
+              });
             });
         </script>
     </body>

@@ -591,11 +591,12 @@
   fieldset i{
     @apply text-lg absolute pointer-events-none z-10 right-2 top-1/2 -translate-y-1/2;
   }
+  .src-button.for-mobile{
+    @apply float-right;
+  }
 
-  @media only screen and (max-width: 768px){
-    .news-card-h .pic{
-      @apply !w-[80px];
-    }
+  .for-mobile{
+    @apply hidden;
   }
 
   @media only screen and (max-width: 1600px){
@@ -605,6 +606,55 @@
     }
     .top-footer{
       @apply max-w-[1210px];
+    }
+  }
+
+  @media only screen and (max-width: 1024px){
+    .topic-list{
+      overflow-y: auto;
+    }
+    .topic-list h5{
+      @apply hidden;
+    }
+    .topic{
+      @apply whitespace-nowrap;
+    }
+
+    .headline h2{
+      @apply text-md leading-[120%];
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .for-mobile{
+      @apply block;
+    }
+    .for-desktop{
+      @apply hidden;
+    }
+    .news-card-h .pic{
+      @apply !w-[80px];
+    }
+    .top-header{
+      @apply px-5;
+    }
+    .top-header .cols-4{
+      @apply col-span-4;
+    }
+    .menu{
+      @apply h-10 overflow-x-auto;
+    }
+    .src-form{
+      @apply opacity-0 pointer-events-none absolute top-0 left-0 w-full h-full z-50 flex-row-reverse px-5;
+    }
+    .src-form.show{
+      @apply opacity-100 pointer-events-auto;
+    }
+    .super-menu{
+      @apply max-h-screen h-[calc(100vh-70px)] rounded-none;
+    }
+    .super-menu.active{
+      @apply top-full;
     }
   }
 
