@@ -1780,6 +1780,7 @@ header::before {
 
 .news-card-h .text {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 0.625rem;
 }
@@ -1886,6 +1887,8 @@ section.headline {
   gap: 1.25rem;
   overflow: hidden;
   border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 246 253 / var(--tw-bg-opacity));
   padding: 1.25rem;
 }
 
@@ -2339,6 +2342,53 @@ fieldset i {
 
   .super-menu.active {
     top: 100%;
+  }
+
+  .news-card-h .pic {
+    width: 5rem !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .top-footer {
+    width: calc(100% - 40px);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .top-footer .cols-2 {
+    grid-column: span 6 / span 6;
+  }
+
+  .top-footer::before,
+    .top-footer::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .news-card-h .text {
+    gap: 0.5rem;
+  }
+
+  .news-card-h .text h4 {
+    font-size: 13px;
+  }
+
+  .news-card-h .pic a.ratio-75 {
+    padding-top: 100%;
+  }
+
+  .news-card-h .pic a.ratio-16 {
+    padding-top: 75%;
+  }
+
+  .media-tag {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-size: 10px;
   }
 }
 

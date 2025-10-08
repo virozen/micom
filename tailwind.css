@@ -397,7 +397,7 @@
     @apply flex gap-5 items-center;
   }
   .news-card-h .text{
-    @apply flex flex-col gap-2.5;
+    @apply flex flex-col gap-2.5 w-full;
   }
   .news-card-v .text a,
   .news-card-h .text a{
@@ -446,7 +446,7 @@
 
   /* JELITA */
   .jelita{
-    @apply rounded-lg p-5 relative overflow-hidden flex flex-col gap-5;
+    @apply rounded-lg p-5 relative overflow-hidden flex flex-col gap-5 bg-[#E3F6FD];
   }
   .img-bg{
     @apply absolute w-full top-0 left-0 z-[-1];
@@ -655,6 +655,37 @@
     }
     .super-menu.active{
       @apply top-full;
+    }
+
+    .news-card-h .pic{
+      @apply !w-20 flex-shrink-0 flex-grow-0;
+    }
+    .top-footer{
+      @apply w-[calc(100%-40px)] px-5;
+    }
+    .top-footer .cols-2{
+      @apply col-span-6;
+    }
+    .top-footer::before,
+    .top-footer::after{
+      @apply hidden;
+    }
+  }
+  @media only screen and (max-width: 480px){
+    .news-card-h .text{
+      @apply gap-2;
+    }
+    .news-card-h .text h4{
+      @apply text-[13px];
+    }
+    .news-card-h .pic a.ratio-75{
+      @apply pt-[100%];
+    }
+    .news-card-h .pic a.ratio-16{
+      @apply pt-[75%];
+    }
+    .media-tag{
+      @apply text-[10px] py-0 px-1;
     }
   }
 
